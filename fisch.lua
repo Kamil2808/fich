@@ -78,11 +78,8 @@ local Buttonnn = MainTab:CreateButton({
         local VirtualInputManager = game:GetService("VirtualInputManager") -- Идите нахуй, я это делал 4 блядских часов
         local Mouse = game:GetService("Players").LocalPlayer.PlayerGui.shakeui.safezone.button.AbsolutePosition
         print(Mouse)
-        VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1) 
-        VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
-        local label = Instance.new("TextLabel", game:GetService("Players").LocalPlayer.PlayerGui.shakeui.safezone)
-        label.Size = UDim2.new(0, 1, 0, 1)
-        label.Position = UDim2.new(0, Mouse.X, 0, Mouse.Y)
+        VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y-10, 0, true, game, 1) 
+        VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y-10, 0, false, game, 1)
         wait(0.1)
     end,
 })
